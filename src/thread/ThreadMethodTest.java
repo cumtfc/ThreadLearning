@@ -12,7 +12,7 @@ public class ThreadMethodTest {
             }
 
             try {
-                Thread.sleep(100000);
+                Thread.sleep(1000000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -20,8 +20,8 @@ public class ThreadMethodTest {
         });
 //        thread.setDaemon(true);
         thread.start();
-//        thread.join(6000);
-        thread.interrupt();//只是发送阻塞时可以中断的信号，不是直接中断
+        thread.join(6000);
+//        thread.interrupt();//只是发送阻塞时可以中断的信号，不是直接中断
         System.out.println("main ending");
     }
 }
